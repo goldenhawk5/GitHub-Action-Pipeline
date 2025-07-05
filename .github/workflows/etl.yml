@@ -1,4 +1,4 @@
-name: Run Arbitrum ETL
+name: Run Arbitrum ETL Data Pipeline
 
 on:
   schedule:
