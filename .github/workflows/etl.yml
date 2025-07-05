@@ -28,4 +28,4 @@ jobs:
           QUICKNODE_URL: ${{ secrets.QUICKNODE_URL }}
           DB_URI: ${{ secrets.DB_URI }}
         run: |
-          python etl_arbitrum.py
+          python dp.py
