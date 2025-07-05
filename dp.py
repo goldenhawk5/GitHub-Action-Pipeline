@@ -19,7 +19,7 @@ cur = conn.cursor()
 
 # Create transactions table
 cur.execute("""
-CREATE TABLE IF NOT EXISTS arbitrum_transactions (
+CREATE TABLE IF NOT EXISTS arbitrun_data (
     hash TEXT PRIMARY KEY,
     from_address TEXT,
     to_address TEXT,
@@ -60,7 +60,7 @@ for block_num in range(start_block, end_block + 1):
         gas = tx.gas
 
         cur.execute("""
-            INSERT INTO arbitrum_transactions (
+            INSERT INTO arbitrun_data (
                 hash, from_address, to_address, block_number, value, gas, timestamp
             ) VALUES (%s, %s, %s, %s, %s, %s, %s)
             ON CONFLICT (hash) DO NOTHING;
